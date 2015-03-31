@@ -150,6 +150,28 @@ Example use of the `override` option:
   });
 ```
 
+#### <a id="optionstask">options[task]</a>
+ * type: `object`
+
+This allows overriding options on a per task level.
+
+Example:
+
+```js
+  grunt.initConfig({
+    newer: {
+      options: {
+        less: {
+          override: function(detail, include) {
+            //no longer need to check the task name
+            checkForModifiedImports(detail.path, detail.time, include);
+          }
+        }
+      }
+    }
+  });
+```
+
 ## That's it
 
 Please [submit an issue](https://github.com/tschaub/grunt-newer/issues) if you encounter any trouble.  Contributions or suggestions for improvements welcome!

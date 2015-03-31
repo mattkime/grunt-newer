@@ -50,6 +50,11 @@ function createTask(grunt) {
       override: nullOverride
     });
 
+    if(options[taskName]) {
+      options = grunt.util._.extend(options, options[taskName]);
+      delete options[taskName];
+    }
+
     // support deprecated timestamps option
     if (options.timestamps) {
       grunt.log.warn('DEPRECATED OPTION.  Use the "cache" option instead');
