@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.2.0
+
+ * Add newer options on a per task basis
+
 ## 1.1.0
 
  * Write current time to timestamp file (thanks @malys, see [#69][69])
